@@ -7,7 +7,6 @@
   color: seashell;
   background-color: black;
   opacity: 0.9;
-  align-content: center;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -28,6 +27,7 @@ h4 {
 h5 {
   font-size: .83em;
 }
+
                       /* -- Header -- */
 
 header {
@@ -43,28 +43,21 @@ header {
   padding-left: 10px;
 }
 
-.logo {
-  /* border: 1px solid black; */
-  width: 100px;
-}
 .topnav {
-  height: 69px;
   width: 400px;
   margin-right: 35px;
-  /* border: 1px solid white; */
   display: flex;
   justify-content: space-around;
-  font-size: 22px;
 }
 
                      /* -- Mission Statement --*/
 
 .container {
-  margin-top: 69px;
   display: flex;
 }
 
 .ms {
+    margin-top: 69px;
     display: flex;
     background-image: url(https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-4/img-mission-background.jpg);
     background-repeat: no-repeat;
@@ -73,14 +66,11 @@ header {
 }
 
 .border {
-
-    align-items: center;
     width: 1200px;
 }
                     /* -- Montly Focus -- */
 
 .focus {
-  border: 1px solid white;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -90,8 +80,14 @@ header {
   width: 1000px;
 }
 
+.offset::before {
+  display: block;
+  content: " ";
+  padding-top: 70px;
+      visibility: hidden;
+}
+
 .pics {
-  position: inherit;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -99,6 +95,10 @@ header {
   padding: 15px;
 }
 
+.img-text {
+  display:flex;
+  margin-top: 10px;
+}
                    /* -- How to Find Us -- */
 
 .location {
@@ -107,24 +107,24 @@ header {
   background-position: center;
   width: auto;
   height: 500px;
-  align-items: center;
   display: flex;
+  padding-top: 70px;
+  position: relative;
 }
 
 .loc-header {
-  color: white;
+  position: absolute;
+  top:85px;
+  left: 46%;
+  background-color: transparent;
 }
 
 
-.locheader {
-  display: flex;
-  text-align: center;
-}
-
-.locitems {
+.loc-items {
   display: flex;
   flex-direction: column;
-  align-items: space-around;
+  flex-basis: 280px;
+  justify-content: center;
   background-color: black;
   width: 300px;
   height: 300px;
